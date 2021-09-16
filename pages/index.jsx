@@ -26,7 +26,7 @@ export default function Home() {
           </a>
         </Link>
 
-        <Link href="">
+        <Link href="#">
           <a className={classes.lists_items}>
             <Image src="/ramen.jpeg" alt="aaa" width={400} height={200} />
             <h3 className={classes.title}>そらの星</h3>
@@ -36,7 +36,7 @@ export default function Home() {
           </a>
         </Link>
 
-        <Link href="">
+        <Link href="#">
           <a className={classes.lists_items}>
             <Image src="/ramen.jpeg" alt="aaa" width={400} height={200} />
             <h3 className={classes.title}>そらの星</h3>
@@ -46,7 +46,7 @@ export default function Home() {
           </a>
         </Link>
 
-        <Link href="">
+        <Link href="#">
           <a className={classes.lists_items}>
             <Image src="/ramen.jpeg" alt="aaa" width={400} height={200} />
             <h3 className={classes.title}>そらの星</h3>
@@ -56,7 +56,7 @@ export default function Home() {
           </a>
         </Link>
 
-        <Link href="">
+        <Link href="#">
           <a className={classes.lists_items}>
             <Image src="/ramen.jpeg" alt="aaa" width={400} height={200} />
             <h3 className={classes.title}>そらの星</h3>
@@ -66,7 +66,7 @@ export default function Home() {
           </a>
         </Link>
 
-        <Link href="">
+        <Link href="#">
           <a className={classes.lists_items}>
             <Image src="/ramen.jpeg" alt="aaa" width={400} height={200} />
             <h3 className={classes.title}>そらの星</h3>

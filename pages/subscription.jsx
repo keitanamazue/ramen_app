@@ -1,4 +1,4 @@
-import { Description } from "@material-ui/icons";
+// import { Description } from "@material-ui/icons";
 import Image from "next/image";
 import Link from "next/link";
 import { Nav } from "../components/Nav";
@@ -14,14 +14,14 @@ export default function subscription() {
       <p className={classes.description}>お好きなプランをお選びください</p>
 
       <div className={classes.cards}>
-          <Link href="">
+          <Link href="#">
             <a className={classes.card}>
             <h3>3 months</h3>
             <h4>3万円/月</h4>
             </a>
            </Link>
 
-            <Link href="">
+            <Link href="#">
             <a className={classes.card}>
                 <h3>12 months</h3>
                 <h4>1万円/月</h4>
