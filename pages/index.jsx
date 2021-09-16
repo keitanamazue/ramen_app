@@ -1,8 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { Links } from "../components/Links";
 import { Nav } from "../components/Nav";
 import classes from "../styles/Home.module.css";
+
+
 
 export default function Home() {
   return (
@@ -13,71 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={classes.container}>
-
-      <div className={classes.lists}>
-        <Link href="detail">
-          <a className={classes.lists_items}>
-            <Image src="/ramen.jpeg" alt="aaa" width={400} height={200} />
-            <h3 className={classes.title}>そらの星</h3>
-            <p className={classes.description}>
-              大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。
-            </p>
-          </a>
-        </Link>
-
-        <Link href="#">
-          <a className={classes.lists_items}>
-            <Image src="/ramen.jpeg" alt="aaa" width={400} height={200} />
-            <h3 className={classes.title}>そらの星</h3>
-            <p className={classes.description}>
-              大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。
-            </p>
-          </a>
-        </Link>
-
-        <Link href="#">
-          <a className={classes.lists_items}>
-            <Image src="/ramen.jpeg" alt="aaa" width={400} height={200} />
-            <h3 className={classes.title}>そらの星</h3>
-            <p className={classes.description}>
-              大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。
-            </p>
-          </a>
-        </Link>
-
-        <Link href="#">
-          <a className={classes.lists_items}>
-            <Image src="/ramen.jpeg" alt="aaa" width={400} height={200} />
-            <h3 className={classes.title}>そらの星</h3>
-            <p className={classes.description}>
-              大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。
-            </p>
-          </a>
-        </Link>
-
-        <Link href="#">
-          <a className={classes.lists_items}>
-            <Image src="/ramen.jpeg" alt="aaa" width={400} height={200} />
-            <h3 className={classes.title}>そらの星</h3>
-            <p className={classes.description}>
-              大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。
-            </p>
-          </a>
-        </Link>
-
-        <Link href="#">
-          <a className={classes.lists_items}>
-            <Image src="/ramen.jpeg" alt="aaa" width={400} height={200} />
-            <h3 className={classes.title}>そらの星</h3>
-            <p className={classes.description}>
-              大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。
-            </p>
-          </a>
-        </Link>
-      </div>
-
-      </div>
+      <Links/>
 
       <Nav />
     </div>

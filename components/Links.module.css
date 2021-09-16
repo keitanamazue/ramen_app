@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+  
+  .lists {
+    padding: 50px 0 100px;
+  }
+  
+  .lists_items:not(:first-child) {
+    padding-top: 10px;
+  }
+  
+  .title {
+    padding-top: 10px;
+  }
+  
+  .description {
+    padding-top: 5px;
+    color: gray;
+  }
