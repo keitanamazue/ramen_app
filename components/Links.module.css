@@ -5,7 +5,7 @@
   }
   
   .lists {
-    padding: 50px 0 100px;
+    padding: 0px 0px 100px;
   }
   
   .lists_items:not(:first-child) {

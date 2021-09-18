@@ -11,9 +11,6 @@ export default function subscription() {
     toast.success("ご購入ありがとうございます。", {
       duration: 4000,
       position: "top-center",
-      // Custom Icon
-      // icon: "👏",
-      // Aria
       ariaProps: {
         role: "status",
         "aria-live": "polite",

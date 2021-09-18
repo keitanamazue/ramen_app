@@ -8,7 +8,7 @@ import classes from "./Nav.module.css";
 export const Nav = () => {
   return (
     <div className={classes.nav}>
-      <Link href="/">
+      <Link href="/ramenList">
         <a className={classes.nav_items}>
           <HomeIcon className={classes.nav_icon} />
           <p className={classes.nav_button}>ホーム</p>
