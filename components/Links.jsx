@@ -56,7 +56,7 @@ const ITEM = [
   },
 ];
 
-export const Links = (props) => {
+export default function Links(props) {
   return (
     <div className="w-10/12 mx-auto md:w-full">
       <div className="pb-20 md:flex md:flex-wrap">
@@ -79,4 +79,4 @@ export const Links = (props) => {
       </div>
     </div>
   );
-};
+}

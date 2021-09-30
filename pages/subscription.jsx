@@ -1,6 +1,6 @@
 import Image from "next/image";
 import toast, { Toaster } from "react-hot-toast";
-import { nav } from "../components/nav";
+import { Nav } from "../components/Nav";
 
 export default function subscription() {
   const handleToast = () => {
@@ -15,7 +15,7 @@ export default function subscription() {
   };
   return (
     <div className="container mx-auto md:flex md:flex-row">
-      <nav />
+      <Nav />
       <div className="w-full h-screen mx-auto flex flex-col items-center justify-start pt-20 md:w-9/12 md:justify-center md:pt-0">
         <Image
           src="/profile.JPG"
