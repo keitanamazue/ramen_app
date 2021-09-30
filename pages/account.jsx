@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { Nav } from "../components/Nav";
+// import { Nav } from "../components/Nav";
 
  const  account = () => {
   return (
     <div className="container mx-auto h-screen md:flex md:flex-row">
-      <Nav />
+      {/* <Nav /> */}
 
       <div className="w-full mx-auto flex flex-col items-center justify-start md:w-9/12 md:justify-center ">
         <div className="flex justify-center items-center w-full border-b-2 border-gray-200 py-3 md:border-0">
