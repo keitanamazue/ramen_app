@@ -1,11 +1,10 @@
 import Image from "next/image";
-import { Nav } from "../components/Nav";
+import { Nav } from "../../components/Nav";
 
-import classes from "../styles/detail.module.css";
+import classes from ".../styles/detail.module.css";
 
 export default function detail(props) {
-
-  console.log(props.title)
+  console.log(props);
   return (
     <div className={classes.container}>
       <Image src="/ramen.jpeg" alt="ramen" width={400} height={350} />

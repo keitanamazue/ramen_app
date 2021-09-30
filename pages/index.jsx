@@ -1,7 +1,4 @@
 import Link from "next/link";
-
-import classes from "../styles/Home.module.css";
-
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center bg-black h-screen w-full">

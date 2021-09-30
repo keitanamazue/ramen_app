@@ -5,10 +5,12 @@ import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
 export const Nav = () => {
   return (
-    <div className="w-full mx-auto flex justify-around items-center fixed bottom-0 bg-white border-t-2 z-50 md:static md:flex-col md:justify-start md:w-3/12">
-      <h1 className="hidden text-green-500 text-3xl mb-60 mt-6 md:block">
-        RAMEN
-      </h1>
+    <div className="w-full mx-auto flex justify-around items-center fixed bottom-0 bg-white border-t-2 z-50 md:static md:flex-col md:justify-start md:w-3/12 md:border-0">
+      <Link href="/ramenList">
+        <a className="hidden text-green-500 text-3xl mb-60 mt-6 md:block">
+          RAMEN
+        </a>
+      </Link>
 
       <Link href="/ramenList">
         <a className="flex flex-col items-center p-3 md:flex-row md:justify-start md:mt-4">

@@ -62,7 +62,7 @@ export const Links = (props) => {
       <div className="pb-20 md:flex md:flex-wrap">
         {ITEM.map((items) => {
           return (
-            <div key={items.id} className="pt-5　w-full mx-auto md:w-5/12">
+            <div key={items.id} className="pt-5　w-full mx-auto md:w-5/12 mt-4">
               <Image
                 src={items.src}
                 alt="ramen-image"
