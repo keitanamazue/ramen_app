@@ -1,7 +1,7 @@
 import RamenDiningIcon from "@mui/icons-material/RamenDining";
 
-import { Links } from "../../components/Links";
-import { Nav } from "../../components/nav";
+import { Links } from "../components/Links";
+import { Nav } from "../components/Nav";
 
 export default function ramenList() {
   return (

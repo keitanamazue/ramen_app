@@ -1,6 +1,6 @@
 import Image from "next/image";
 import toast, { Toaster } from "react-hot-toast";
-import { Nav } from "../../components/nav";
+import { Nav } from "../components/Nav";
 
 export default function subscription() {
   const handleToast = () => {
