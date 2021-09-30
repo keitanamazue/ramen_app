@@ -1,4 +1,3 @@
-// import { Description } from "@material-ui/icons";
 import Image from "next/image";
 import toast, { Toaster } from "react-hot-toast";
 
