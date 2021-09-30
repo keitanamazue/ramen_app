@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import classes from "./Links.module.css";
 
 const ITEM = [
   {
@@ -23,8 +21,7 @@ const ITEM = [
     id: "3",
     src: "/download-1.jpg",
     title: "花道ラーメン",
-    excerpt:
-      "学生に人気の低価格ラーメン。このラーメン一杯で４００円。",
+    excerpt: "学生に人気の低価格ラーメン。このラーメン一杯で４００円。",
     desc: "大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。",
   },
   {
@@ -47,36 +44,38 @@ const ITEM = [
     id: "6",
     src: "/download-4.jpg",
     title: "北海道コーンバターラーメン",
-    excerpt:
-      "北海道の有名ラーメンがついに上陸。",
+    excerpt: "北海道の有名ラーメンがついに上陸。",
     desc: "大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。",
   },
   {
     id: "7",
     src: "/download-6.jpg",
     title: "味増し",
-    excerpt:
-      "替え玉が無料で有名。味も値段の割に良い。",
+    excerpt: "替え玉が無料で有名。味も値段の割に良い。",
     desc: "大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。大阪で珍しい横浜家系ラーメンを本格的に提供しているラーメン屋になります。",
   },
 ];
 
 export const Links = (props) => {
-  console.log(props);
   return (
-    <div>
-      <div className={classes.container}>
-        <div className={classes.lists}>
-          {ITEM.map((items) => {
-            return (
-              <div key={items.id} className={classes.lists_items}>
-                <Image src={items.src} alt="aaa" width={400} height={200} />
-                <h3 className={classes.title}>{items.title}</h3>
-                <p className={classes.description}>{items.excerpt}</p>
-              </div>
-            );
-          })}
-        </div>
+    <div className="w-10/12 mx-auto md:w-full">
+      <div className="pb-20 md:flex md:flex-wrap">
+        {ITEM.map((items) => {
+          return (
+            <div key={items.id} className="pt-5　w-full mx-auto md:w-5/12">
+              <Image
+                src={items.src}
+                alt="ramen-image"
+                width={400}
+                height={200}
+              />
+              <h3 className="font-bold text-lg pt-5">{items.title}</h3>
+              <p className="pt-2 text-sm text-gray-400 break-normal	">
+                {items.excerpt}
+              </p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
