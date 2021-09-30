@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Nav } from "../../components/Nav";
+import { Nav } from "../../components/nav";
 
-export const account = () => {
+export default function account() {
   return (
     <div className="container mx-auto h-screen md:flex md:flex-row">
       <Nav />
@@ -25,4 +25,4 @@ export const account = () => {
       </div>
     </div>
   );
-};
+}

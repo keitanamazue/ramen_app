@@ -1,8 +1,8 @@
 import Image from "next/image";
 import toast, { Toaster } from "react-hot-toast";
-import { Nav } from "../../components/Nav";
+import { Nav } from "../../components/nav";
 
-export const subscription = () => {
+export default function subscription() {
   const handleToast = () => {
     toast.success("ご購入ありがとうございます。", {
       duration: 4000,
@@ -49,4 +49,4 @@ export const subscription = () => {
       </div>
     </div>
   );
-};
+}

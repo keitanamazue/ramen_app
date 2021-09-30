@@ -1,9 +1,9 @@
 import RamenDiningIcon from "@mui/icons-material/RamenDining";
 
 import { Links } from "../../components/Links";
-import { Nav } from "../../components/Nav";
+import { Nav } from "../../components/nav";
 
-export const ramenList = () => {
+export default function ramenList() {
   return (
     <div className="container mx-auto md:flex ">
       <Nav />
@@ -23,4 +23,4 @@ export const ramenList = () => {
       </div>
     </div>
   );
-};
+}
