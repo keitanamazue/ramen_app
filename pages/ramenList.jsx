@@ -1,12 +1,12 @@
 import RamenDiningIcon from "@mui/icons-material/RamenDining";
 
 import { Links } from "../components/Links";
-import { Nav } from "../components/Nav";
+import { nav } from "../components/nav";
 
 export default function ramenList() {
   return (
     <div className="container mx-auto md:flex ">
-      <Nav />
+      <nav />
 
       <div className="md:w-9/12 md:flex md:flex-col md:items-center">
         <input

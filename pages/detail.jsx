@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Nav } from "../../components/Nav";
+import { nav } from "../../components/nav";
 
 import classes from ".../styles/detail.module.css";
 
@@ -16,7 +16,7 @@ export default function detail(props) {
         </p>
       </div>
 
-      <Nav />
+      <nav />
     </div>
   );
 }

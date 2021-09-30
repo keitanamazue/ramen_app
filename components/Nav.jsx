@@ -3,7 +3,7 @@ import HomeIcon from "@material-ui/icons/Home";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
-export const Nav = () => {
+export const nav = () => {
   return (
     <div className="w-full mx-auto flex justify-around items-center fixed bottom-0 bg-white border-t-2 z-50 md:static md:flex-col md:justify-start md:w-3/12 md:border-0">
       <Link href="/ramenList">
