@@ -1,5 +1,5 @@
 import Link from "next/link";
-export default function Home() {
+export const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center bg-black h-screen w-full">
       <div className="text-4xl tracking-widest sm:text-6xl">
