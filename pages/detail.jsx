@@ -3,7 +3,7 @@ import { Nav } from "../../components/Nav";
 
 import classes from ".../styles/detail.module.css";
 
-export default function detail(props) {
+const detail = (props) => {
   console.log(props);
   return (
     <div className={classes.container}>
@@ -19,4 +19,6 @@ export default function detail(props) {
       <Nav />
     </div>
   );
-}
+};
+
+export default detail;

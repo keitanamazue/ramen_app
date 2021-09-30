@@ -1,5 +1,5 @@
 import Link from "next/link";
-export default function Home() {
+const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center bg-black h-screen w-full">
       <div className="text-4xl tracking-widest sm:text-6xl">
@@ -23,4 +23,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Home;
