@@ -1,30 +1,56 @@
-import Image from "next/image";
-import { Nav } from "../components/Nav";
+import Link from "next/link";
 
- const  account = () => {
+import { Layout } from "../components/Layout";
+import { Header } from "../components/Header";
+import { Sidebar } from "../components/Sidebar";
+import { Content } from "../components/Content";
+
+import HomeIcon from "@material-ui/icons/Home";
+import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import AccountContent from "../components/AccountContent";
+
+const account = () => {
   return (
-    <div className="container mx-auto h-screen md:flex md:flex-row">
-      <Nav />
-
-      <div className="w-full mx-auto flex flex-col items-center justify-start md:w-9/12 md:justify-center ">
-        <div className="flex justify-center items-center w-full border-b-2 border-gray-200 py-3 md:border-0">
-          <Image
-            src="/profile.JPG"
-            alt="ramen"
-            width={70}
-            height={70}
-            className="rounded-full"
-          />
-          <p className="ml-20 uppercase">keita namazue</p>
-        </div>
-        <div className="flex flex-col items-center mt-42">
-          <p className="text-xl font-bold mt-20">あなたの現在のポイントは</p>
-          <h2 className="text-8xl font-bold mt-20">100</h2>
-          <p className="text-xl font-bold mt-20">ポイントです</p>
-        </div>
-      </div>
-    </div>
+    <Layout
+      sidebar={
+        <Sidebar
+          title={"RAMEN"}
+          nav={
+            <>
+              {[
+                {
+                  title: "ホーム",
+                  url: "/ramenList",
+                  icon: <HomeIcon className="text-4xl" />,
+                },
+                {
+                  title: "サブスク",
+                  url: "/subscription",
+                  icon: <AddCircleOutlineIcon className="text-4xl" />,
+                },
+                {
+                  title: "アカウント",
+                  url: "account",
+                  icon: <AccountCircleIcon className="text-4xl" />,
+                },
+              ].map((item) => {
+                return (
+                  <Link key={item.title} href={item.url}>
+                    <a className="flex flex-col items-center p-3 md:flex-row md:justify-start md:mt-4">
+                      {item.icon}
+                      <p className="text-xs md:text-lg">{item.title}</p>
+                    </a>
+                  </Link>
+                );
+              })}
+            </>
+          }
+        />
+      }
+      main={<AccountContent />}
+    />
   );
-}
+};
 
 export default account;

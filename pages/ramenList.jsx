@@ -1,27 +1,53 @@
-import RamenDiningIcon from "@mui/icons-material/RamenDining";
+import Link from "next/link";
 
-import { Links } from "../components/Links";
-import { Nav } from "../components/Nav";
+import { Layout } from "../components/Layout";
+import { Sidebar } from "../components/Sidebar";
+import { RamenLists } from "../components/RamenLists";
+
+import HomeIcon from "@material-ui/icons/Home";
+import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
 const ramenList = () => {
   return (
-    <div className="container mx-auto md:flex ">
-      <Nav />
-
-      <div className="md:w-9/12 md:flex md:flex-col md:items-center">
-        <input
-          className="hidden w-72 py-4 px-4 bg-gray-100 mt-6 outline-none md:block"
-          type="text"
-          placeholder="食べたいラーメンは？"
+    <Layout
+      sidebar={
+        <Sidebar
+          title={"RAMEN"}
+          nav={
+            <>
+              {[
+                {
+                  title: "ホーム",
+                  url: "/ramenList",
+                  icon: <HomeIcon className="text-4xl" />,
+                },
+                {
+                  title: "サブスク",
+                  url: "/subscription",
+                  icon: <AddCircleOutlineIcon className="text-4xl" />,
+                },
+                {
+                  title: "アカウント",
+                  url: "account",
+                  icon: <AccountCircleIcon className="text-4xl" />,
+                },
+              ].map((item) => {
+                return (
+                  <Link key={item.title} href={item.url}>
+                    <a className="flex flex-col items-center p-3 md:flex-row md:justify-start md:mt-4">
+                      {item.icon}
+                      <p className="text-xs md:text-lg">{item.title}</p>
+                    </a>
+                  </Link>
+                );
+              })}
+            </>
+          }
         />
-        <div className="flex justify-center items-center p-4">
-          <h2>近くのラーメン</h2>
-          <RamenDiningIcon />
-        </div>
-
-        <Links />
-      </div>
-    </div>
+      }
+      main={<RamenLists />}
+    />
   );
 };
 

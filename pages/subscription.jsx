@@ -1,6 +1,12 @@
-import Image from "next/image";
-import toast, { Toaster } from "react-hot-toast";
-import { Nav } from "../components/Nav";
+import Link from "next/link";
+
+import { Layout } from "../components/Layout";
+import { Sidebar } from "../components/Sidebar";
+
+import HomeIcon from "@material-ui/icons/Home";
+import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import { SubscriotionContent } from "../components/SubscriotionContent";
 
 const subscription = () => {
   const handleToast = () => {
@@ -14,40 +20,44 @@ const subscription = () => {
     });
   };
   return (
-    <div className="container mx-auto md:flex md:flex-row">
-      <Nav />
-      <div className="w-full h-screen mx-auto flex flex-col items-center justify-start pt-20 md:w-9/12 md:justify-center md:pt-0">
-        <Image
-          src="/profile.JPG"
-          alt="ramen"
-          width={70}
-          height={70}
-          className="rounded-full"
+    <Layout
+      sidebar={
+        <Sidebar
+          title={"RAMEN"}
+          nav={
+            <>
+              {[
+                {
+                  title: "ホーム",
+                  url: "/ramenList",
+                  icon: <HomeIcon className="text-4xl" />,
+                },
+                {
+                  title: "サブスク",
+                  url: "/subscription",
+                  icon: <AddCircleOutlineIcon className="text-4xl" />,
+                },
+                {
+                  title: "アカウント",
+                  url: "account",
+                  icon: <AccountCircleIcon className="text-4xl" />,
+                },
+              ].map((item) => {
+                return (
+                  <Link key={item.title} href={item.url}>
+                    <a className="flex flex-col items-center p-3 md:flex-row md:justify-start md:mt-4">
+                      {item.icon}
+                      <p className="text-xs md:text-lg">{item.title}</p>
+                    </a>
+                  </Link>
+                );
+              })}
+            </>
+          }
         />
-
-        <h2 className="pt-10 ">Select subsucription</h2>
-        <p className="pt-5">お好きなプランをお選びください</p>
-
-        <div className="flex justify-evenly items-center gap-7 mt-30">
-          <div
-            className="py-14 px-8 rounded-3xl shadow-md  mt-16 center cursor-pointer"
-            onClick={handleToast}
-          >
-            <h3 className="text-lg font-bold">3 months</h3>
-            <h4 className="text-base font-light center">3万円/月</h4>
-            <Toaster />
-          </div>
-
-          <div
-            className="bg-red-200   py-14 px-6 rounded-3xl shadow-md mt-16 center cursor-pointer"
-            onClick={handleToast}
-          >
-            <h3 className="text-xl font-bold">12 months</h3>
-            <h4 className="text-base font-light center">1万円/月</h4>
-          </div>
-        </div>
-      </div>
-    </div>
+      }
+      main={<SubscriotionContent />}
+    />
   );
 };
 
